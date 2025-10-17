@@ -1,0 +1,862 @@
+/* ===== BASIC RESET ===== */
+/* Set consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GLOBAL BODY STYLES ===== */
+/* Define font family, colors, and line height for all site */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* ===== HEADER AND NAVIGATION ===== */
+/* Header container with flexbox for logo and nav alignment */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Logo image sizing */
+.logo img {
+    max-height: 120px;
+    width: auto;
+}
+
+/* Navigation list styling - horizontal layout */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Navigation link styling */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #25d366;
+}
+
+/* ===== HERO SECTION (INDEX PAGE) ===== */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9), rgba(0, 77, 153, 0.9)),
+                url('img/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+/* Hero content overlay */
+.hero-overlay {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Hero heading */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Hero paragraph text */
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* Hero call to action button */
+.hero-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hero button hover effect */
+.hero-btn:hover {
+    background-color: #ff8533;
+    transform: scale(1.05);
+}
+
+/* ===== GENERAL SECTIONS ===== */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Heading styles */
+h1, h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 20px;
+}
+
+/* Section introduction text - centered and styled */
+.section-intro {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* ===== ABOUT PREVIEW SECTION (HOME PAGE) ===== */
+/* Grid layout for about cards on homepage */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Individual about card styling */
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* About card hover effect - lift upward */
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Large emoji icon in about cards */
+.about-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+/* About card heading */
+.about-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* ===== PRODUCTS SECTION (HOME PAGE) ===== */
+/* Products grid using CSS Grid for responsive layout */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Individual product card */
+.product {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Product card hover effect */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Product emoji icon */
+.product-icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Product heading */
+.product h3 {
+    color: #003366;
+    font-size: 1.2em;
+}
+
+/* View All Products button */
+.view-all-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* View All button hover effect */
+.view-all-btn:hover {
+    background-color: #004d99;
+    transform: translateY(-2px);
+}
+
+/* ===== ABOUT PAGE HERO ===== */
+/* Hero section specific to About page */
+.about-hero {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== MISSION & VISION SECTION ===== */
+/* Grid for mission and vision cards */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Mission/Vision card styling */
+.mv-card {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.2);
+}
+
+/* Icon in mission/vision cards */
+.mv-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Mission/Vision card heading */
+.mv-card h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Mission/Vision card paragraph */
+.mv-card p {
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ===== VALUES SECTION ===== */
+/* Background color for values section */
+.values-section {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+}
+
+/* Grid layout for value cards */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Individual value card */
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Value card hover effect */
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Value card icon */
+.value-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+/* Value card heading */
+.value-card h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* ===== TEAM SECTION ===== */
+/* Team section content layout */
+.team-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Team image container */
+.team-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Team image styling */
+.team-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Team text content */
+.team-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Team features list */
+.team-features {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Individual team feature with checkmark */
+.team-features li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #555;
+}
+
+/* Checkmark before each team feature */
+.team-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ===== CONTACT FORM STYLES ===== */
+/* Form container with white background and shadow */
+#contact-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Form element styling - flexbox column layout */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group container for label, input, and error message */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Form label styling */
+.form-group label {
+    font-weight: bold;
+    color: #003366;
+    font-size: 16px;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state for form inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+/* Textarea specific styling - vertical resize only */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Error message styling - hidden by default */
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Success message styling - shown after valid submission */
+.success-message {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    margin-top: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Slide down animation for success message */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #004d99;
+    transform: translateY(-2px);
+}
+
+/* Submit button active state */
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== CONTACT INFORMATION SECTION ===== */
+/* Contact info paragraph with flexbox for icons */
+#contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Contact link styling */
+#contact a {
+    color: #003366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact link hover effect */
+#contact a:hover {
+    color: #ff6600;
+}
+
+/* ===== PRODUCTS PAGE STYLES ===== */
+/* Products page hero section */
+.products-hero {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Products hero heading */
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* Products hero paragraph */
+.hero-content p {
+    font-size: 1.2em;
+    opacity: 0.95;
+}
+
+/* Products grid layout */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Product card styling */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Product card visible state with animation */
+.product-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Fade in up animation for product cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Product card hover effect */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image container */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+/* Product image - covers container */
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Zoom effect on product image hover */
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+/* Product badge (Popular, New, etc.) */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff6600;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Product information section */
+.product-info {
+    padding: 25px;
+}
+
+/* Product title */
+.product-info h3 {
+    color: #003366;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Product description */
+.product-info > p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* Product features list */
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* Individual feature item */
+.product-features li {
+    padding: 8px 0;
+    color: #666;
+    font-size: 0.9em;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Checkmark icon before each feature */
+.product-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Product inquiry button */
+.product-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+/* Product button hover effect */
+.product-btn:hover {
+    background-color: #004d99;
+    transform: translateY(-2px);
+}
+
+/* ===== CALL TO ACTION SECTION ===== */
+/* CTA section with gradient background */
+.cta-section {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* CTA heading */
+.cta-content h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* CTA paragraph */
+.cta-content p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    opacity: 0.95;
+}
+
+/* CTA button with orange color for contrast */
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* CTA button hover effect */
+.cta-button:hover {
+    background-color: #ff8533;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+/* Footer styling with brand color background */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+/* Fixed position WhatsApp button in bottom right */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+/* WhatsApp button hover effect - scale up */
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE DESIGN - MOBILE DEVICES ===== */
+@media (max-width: 768px) {
+    /* Reduce header padding on mobile */
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Stack navigation vertically on mobile */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    /* Reduce hero section padding */
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    /* Smaller hero heading on mobile */
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    /* Smaller hero text */
+    .hero p {
+        font-size: 1.1em;
+    }
+    
+    /* Adjust products hero */
+    .products-hero {
+        padding: 50px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .hero-content p {
+        font-size: 1em;
+    }
+    
+    /* Single column products grid on mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Reduce product image height on mobile */
+    .product-image {
+        height: 200px;
+    }
+    
+    /* Adjust CTA section padding */
+    .cta-section {
+        padding: 40px 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.5em;
+    }
+    
+    /* Reduce contact form padding on mobile */
+    #contact-form {
+        padding: 25px;
+        margin: 20px 15px;
+    }
+    
+    .form-group label {
+        font-size: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+    
+    /* Reduce products grid on mobile */
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .product {
+        padding: 15px;
+    }
+    
+    /* Single column about grid on mobile */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Single column values grid on mobile */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
