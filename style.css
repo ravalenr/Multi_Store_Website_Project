@@ -120,7 +120,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Section introduction text - centered and styled */
+/* Section introduction text*/
 .section-intro {
     text-align: center;
     font-size: 1.1em;
@@ -131,7 +131,7 @@ p {
 }
 
 /* ===== ABOUT PREVIEW SECTION (HOME PAGE) ===== */
-/* Grid layout for about cards on homepage */
+/* Grid layout */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -149,12 +149,12 @@ p {
     transition: transform 0.3s;
 }
 
-/* About card hover effect - lift upward */
+/* About card lift hover effect */
 .about-card:hover {
     transform: translateY(-10px);
 }
 
-/* Large emoji icon in about cards */
+/* Larger emoji icon in about cards */
 .about-icon {
     font-size: 3em;
     margin-bottom: 15px;
@@ -167,7 +167,7 @@ p {
 }
 
 /* ===== PRODUCTS SECTION (HOME PAGE) ===== */
-/* Products grid using CSS Grid for responsive layout */
+/* Products grid using CSS Grid */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -221,8 +221,8 @@ p {
     transform: translateY(-2px);
 }
 
-/* ===== ABOUT PAGE HERO ===== */
-/* Hero section specific to About page */
+/* ======== ABOUT PAGE =========== */
+/* Hero section: About page */
 .about-hero {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -230,8 +230,6 @@ p {
     text-align: center;
     margin-bottom: 40px;
 }
-
-/* ===== MISSION & VISION SECTION ===== */
 /* Grid for mission and vision cards */
 .mission-vision-grid {
     display: grid;
@@ -268,8 +266,6 @@ p {
     line-height: 1.8;
     margin-bottom: 0;
 }
-
-/* ===== VALUES SECTION ===== */
 /* Background color for values section */
 .values-section {
     background-color: #f5f5f5;
@@ -311,8 +307,6 @@ p {
     color: #003366;
     margin-bottom: 10px;
 }
-
-/* ===== TEAM SECTION ===== */
 /* Team section content layout */
 .team-content {
     display: grid;
@@ -367,7 +361,7 @@ p {
     font-size: 1.2em;
 }
 
-/* ===== CONTACT FORM STYLES ===== */
+/* ===== CONTACT FORM SECTION ===== */
 /* Form container with white background and shadow */
 #contact-form {
     background-color: #ffffff;
@@ -385,7 +379,7 @@ p {
     gap: 20px;
 }
 
-/* Form group container for label, input, and error message */
+/* Form group container: label, input, and error message */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -472,7 +466,7 @@ p {
     margin-top: 10px;
 }
 
-/* Submit button hover effect */
+/* Submit button hover */
 .submit-btn:hover {
     background-color: #004d99;
     transform: translateY(-2px);
@@ -485,11 +479,15 @@ p {
 
 /* ===== CONTACT INFORMATION SECTION ===== */
 /* Contact info paragraph with flexbox for icons */
+#contact {
+    text-align: center;
+}
 #contact p {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 /* Contact link styling */
@@ -505,7 +503,7 @@ p {
 }
 
 /* ===== PRODUCTS PAGE STYLES ===== */
-/* Products page hero section */
+/* Hero section */
 .products-hero {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -580,7 +578,7 @@ p {
     background-color: #f5f5f5;
 }
 
-/* Product image - covers container */
+/* Product image (to cover container) */
 .product-image img {
     width: 100%;
     height: 100%;
@@ -593,7 +591,7 @@ p {
     transform: scale(1.1);
 }
 
-/* Product badge (Popular, New, etc.) */
+/* Product badge (Popular, New, Hot Deal) */
 .product-badge {
     position: absolute;
     top: 15px;
@@ -646,7 +644,7 @@ p {
     padding-left: 25px;
 }
 
-/* Checkmark icon before each feature */
+/* Checkmark icon */
 .product-features li:before {
     content: "✓";
     position: absolute;
@@ -676,7 +674,6 @@ p {
 }
 
 /* ===== CALL TO ACTION SECTION ===== */
-/* CTA section with gradient background */
 .cta-section {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -699,7 +696,7 @@ p {
     opacity: 0.95;
 }
 
-/* CTA button with orange color for contrast */
+/* CTA button (contrasting using brand colors) */
 .cta-button {
     display: inline-block;
     background-color: #ff6600;
@@ -712,7 +709,7 @@ p {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* CTA button hover effect */
+/* CTA button hover */
 .cta-button:hover {
     background-color: #ff8533;
     transform: scale(1.05);
@@ -749,12 +746,12 @@ footer {
     transition: transform 0.3s;
 }
 
-/* WhatsApp button hover effect - scale up */
+/* WhatsApp button hover effect */
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE DESIGN - MOBILE DEVICES ===== */
+/* ===== RESPONSIVE DESIGN - SMARTPHONE ===== */
 @media (max-width: 768px) {
     /* Reduce header padding on mobile */
     header {
@@ -784,7 +781,7 @@ footer {
         font-size: 1.1em;
     }
     
-    /* Adjust products hero */
+    /* Adjust in products hero */
     .products-hero {
         padding: 50px 20px;
     }
@@ -848,13 +845,13 @@ footer {
         padding: 15px;
     }
     
-    /* Single column about grid on mobile */
+    /* One column about grid on mobile */
     .about-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-    /* Single column values grid on mobile */
+    /* One column values grid on mobile */
     .values-grid {
         grid-template-columns: 1fr;
         gap: 20px;
