@@ -5,21 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products - Multi Store Eletro</title>
     <link rel="stylesheet" href="style.css">
-    <!-- WhatsApp floating button for easy customer contact -->
-    <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
-        class="whatsapp-float" 
-        target="_blank" 
-        title="Contact us on WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50">
-    </a>
 </head>
 <body>
-    <!-- Header section with logo and navigation menu -->
+    <!-- Header section -->
     <header>
         <div class="logo">
           <a href="index.html"><img src="img/logotipo.png" alt="Multi Store Eletro" /></a>
         </div>
-        <!-- Navigation links to all pages -->
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -30,7 +22,7 @@
         </nav>
     </header>
 
-    <!-- Hero section for products page -->
+    <!-- Hero section -->
     <section class="products-hero">
         <div class="hero-content">
             <h1>Our Product Categories</h1>
@@ -38,18 +30,71 @@
         </div>
     </section>
 
-    <!-- Main products section with detailed product cards -->
+    <!-- Meet our products video section -->
+    <section id="featured-videos" class="section">
+        <h2>Check Out Our Top Products</h2>
+        <p class="section-intro">Watch these videos to see our finest products in action</p>
+        
+        <div class="video-grid">
+            <!-- iPhone 17 Pro -->
+            <div class="video-item">
+                <h3>iPhone 17 Pro</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/_-AS5DtDeqs" 
+                            title="iPhone 17 Pro" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Latest flagship with amazing camera and performance</p>
+            </div>
+
+            <!-- Samsung Bespoke Refrigerator -->
+            <div class="video-item">
+                <h3>Samsung Bespoke Refrigerator</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/A2HqZnKIViI" 
+                            title="Samsung Bespoke Refrigerator" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Customizable design meets smart technology</p>
+            </div>
+
+            <!-- Samsung Frame Pro -->
+            <div class="video-item">
+                <h3>Samsung Frame Pro TV</h3>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Q7Rxzgo96M0" 
+                            title="Samsung Frame Pro TV" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <p>TV that looks like art when not in use</p>
+            </div>
+        </div>
+
+        <!-- Toggle button to show/hide videos -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="toggleVideos" class="toggle-btn">Hide Videos</button>
+        </div>
+    </section>
+
+    <!-- Main products section -->
     <section id="products" class="section">
         <h2>Browse Our Collection</h2>
         <p class="section-intro">Quality products from trusted brands, backed by excellent customer service and warranty support.</p>
         
-        <!-- Products grid container -->
         <div class="products-grid">
           
           <!-- TV Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <!-- Placeholder image for TVs - replace with actual product images -->
               <img src="img/tvs.jpeg" alt="Smart TVs">
               <div class="product-badge">Popular</div>
             </div>
@@ -156,7 +201,7 @@
         </div>
     </section>
 
-    <!-- Call to action section encouraging customers to contact -->
+    <!-- Call to action -->
     <section class="cta-section">
         <div class="cta-content">
             <h2>Can't Find What You're Looking For?</h2>
@@ -165,30 +210,53 @@
         </div>
     </section>
 
-    <!-- Footer section with copyright information -->
+    <!-- WhatsApp floating button -->
+    <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
+        class="whatsapp-float" 
+        target="_blank" 
+        title="Contact us on WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50">
+    </a>
+
     <footer>
         <p>&copy; 2025 Multi Store Eletro. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for scroll animations on product cards -->
     <script>
-        // Add visible class to product cards when they come into viewport
-        // This creates a smooth fade-in effect as user scrolls
+        // Product cards scroll animation
         window.addEventListener('scroll', function() {
-            // Select all product cards
-            const productCards = document.querySelectorAll('.product-card');
+            const cards = document.querySelectorAll('.product-card');
             
-            // Loop through each product card
-            productCards.forEach(function(card) {
-                // Get the position of the card relative to viewport
-                const cardPosition = card.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
+            cards.forEach(function(card) {
+                const position = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
                 
-                // If card is in viewport, add the visible class for animation
-                if (cardPosition < screenPosition) {
+                if (position < windowHeight * 0.8) {
                     card.classList.add('is-visible');
                 }
             });
+        });
+
+        // Toggle videos section visibility
+        const toggleBtn = document.getElementById('toggleVideos');
+        const videosSection = document.getElementById('featured-videos');
+        let videosVisible = true;
+
+        toggleBtn.addEventListener('click', function() {
+            const videoGrid = document.querySelector('.video-grid');
+            const intro = videosSection.querySelector('.section-intro');
+            
+            if (videosVisible) {
+                videoGrid.style.display = 'none';
+                intro.style.display = 'none';
+                toggleBtn.textContent = 'Show Videos';
+                videosVisible = false;
+            } else {
+                videoGrid.style.display = 'grid';
+                intro.style.display = 'block';
+                toggleBtn.textContent = 'Hide Videos';
+                videosVisible = true;
+            }
         });
     </script>
 </body>

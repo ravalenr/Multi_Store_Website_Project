@@ -1,13 +1,11 @@
 /* ===== BASIC RESET ===== */
-/* Set consistent box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== GLOBAL BODY STYLES ===== */
-/* Define font family, colors, and line height for all site */
+/* ===== BODY STYLES ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
@@ -16,7 +14,6 @@ body {
 }
 
 /* ===== HEADER AND NAVIGATION ===== */
-/* Header container with flexbox for logo and nav alignment */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,20 +23,17 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo image sizing */
 .logo img {
     max-height: 120px;
     width: auto;
 }
 
-/* Navigation list styling - horizontal layout */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-/* Navigation link styling */
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -47,7 +41,6 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-/* Hover effect for navigation links */
 nav ul li a:hover {
     color: #25d366;
 }
@@ -64,26 +57,23 @@ nav ul li a:hover {
     position: relative;
 }
 
-/* Hero content overlay */
 .hero-overlay {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Hero heading */
 .hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
     color: white;
 }
 
-/* Hero paragraph text */
 .hero p {
     font-size: 1.3em;
     margin-bottom: 30px;
 }
 
-/* Hero call to action button */
+/* hero button */
 .hero-btn {
     display: inline-block;
     background-color: #ff6600;
@@ -96,7 +86,6 @@ nav ul li a:hover {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Hero button hover effect */
 .hero-btn:hover {
     background-color: #ff8533;
     transform: scale(1.05);
@@ -109,18 +98,15 @@ section {
     margin: auto;
 }
 
-/* Heading styles */
 h1, h2 {
     margin-bottom: 20px;
     color: #003366;
 }
 
-/* Paragraph spacing */
 p {
     margin-bottom: 20px;
 }
 
-/* Section introduction text*/
 .section-intro {
     text-align: center;
     font-size: 1.1em;
@@ -130,8 +116,7 @@ p {
     line-height: 1.8;
 }
 
-/* ===== ABOUT PREVIEW SECTION (HOME PAGE) ===== */
-/* Grid layout */
+/* ===== ABOUT PREVIEW (HOME PAGE) ===== */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -139,7 +124,6 @@ p {
     margin-top: 40px;
 }
 
-/* Individual about card styling */
 .about-card {
     background: white;
     padding: 30px;
@@ -149,32 +133,27 @@ p {
     transition: transform 0.3s;
 }
 
-/* About card lift hover effect */
 .about-card:hover {
     transform: translateY(-10px);
 }
 
-/* Larger emoji icon in about cards */
 .about-icon {
     font-size: 3em;
     margin-bottom: 15px;
 }
 
-/* About card heading */
 .about-card h3 {
     color: #003366;
     margin-bottom: 10px;
 }
 
-/* ===== PRODUCTS SECTION (HOME PAGE) ===== */
-/* Products grid using CSS Grid */
+/* ===== PRODUCTS (HOME PAGE) ===== */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* Individual product card */
 .product {
     background-color: white;
     padding: 30px 20px;
@@ -184,26 +163,22 @@ p {
     transition: transform 0.3s;
 }
 
-/* Product card hover effect */
 .product:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-/* Product emoji icon */
 .product-icon {
     font-size: 3em;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Product heading */
 .product h3 {
     color: #003366;
     font-size: 1.2em;
 }
 
-/* View All Products button */
 .view-all-btn {
     display: inline-block;
     background-color: #003366;
@@ -215,14 +190,12 @@ p {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* View All button hover effect */
 .view-all-btn:hover {
     background-color: #004d99;
     transform: translateY(-2px);
 }
 
-/* ======== ABOUT PAGE =========== */
-/* Hero section: About page */
+/* ===== ABOUT PAGE ===== */
 .about-hero {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -230,7 +203,7 @@ p {
     text-align: center;
     margin-bottom: 40px;
 }
-/* Grid for mission and vision cards */
+
 .mission-vision-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -238,7 +211,6 @@ p {
     margin-top: 40px;
 }
 
-/* Mission/Vision card styling */
 .mv-card {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -248,31 +220,27 @@ p {
     box-shadow: 0 6px 20px rgba(0, 51, 102, 0.2);
 }
 
-/* Icon in mission/vision cards */
 .mv-icon {
     font-size: 3em;
     margin-bottom: 20px;
 }
 
-/* Mission/Vision card heading */
 .mv-card h3 {
     color: white;
     margin-bottom: 15px;
     font-size: 1.5em;
 }
 
-/* Mission/Vision card paragraph */
 .mv-card p {
     line-height: 1.8;
     margin-bottom: 0;
 }
-/* Background color for values section */
+
 .values-section {
     background-color: #f5f5f5;
     padding: 60px 20px;
 }
 
-/* Grid layout for value cards */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -280,7 +248,6 @@ p {
     margin-top: 40px;
 }
 
-/* Individual value card */
 .value-card {
     background: white;
     padding: 30px;
@@ -290,24 +257,22 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Value card hover effect */
 .value-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Value card icon */
 .value-icon {
     font-size: 3em;
     margin-bottom: 15px;
 }
 
-/* Value card heading */
 .value-card h3 {
     color: #003366;
     margin-bottom: 10px;
 }
-/* Team section content layout */
+
+/* team section */
 .team-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -316,34 +281,29 @@ p {
     margin-top: 30px;
 }
 
-/* Team image container */
 .team-image {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Team image styling */
 .team-image img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Team text content */
 .team-text p {
     margin-bottom: 20px;
     line-height: 1.8;
 }
 
-/* Team features list */
 .team-features {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
 
-/* Individual team feature with checkmark */
 .team-features li {
     padding: 10px 0;
     padding-left: 30px;
@@ -351,7 +311,6 @@ p {
     color: #555;
 }
 
-/* Checkmark before each team feature */
 .team-features li:before {
     content: "✓";
     position: absolute;
@@ -361,8 +320,7 @@ p {
     font-size: 1.2em;
 }
 
-/* ===== CONTACT FORM SECTION ===== */
-/* Form container with white background and shadow */
+/* ===== CONTACT FORM ===== */
 #contact-form {
     background-color: #ffffff;
     padding: 40px;
@@ -372,28 +330,24 @@ p {
     margin: 40px auto;
 }
 
-/* Form element styling - flexbox column layout */
 #contactForm {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Form group container: label, input, and error message */
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-/* Form label styling */
 .form-group label {
     font-weight: bold;
     color: #003366;
     font-size: 16px;
 }
 
-/* Input and textarea styling */
 .form-group input,
 .form-group textarea {
     padding: 12px 15px;
@@ -404,7 +358,6 @@ p {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Focus state for form inputs */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -412,13 +365,11 @@ p {
     box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
 }
 
-/* Textarea specific styling - vertical resize only */
 .form-group textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* Error message styling - hidden by default */
 .error-message {
     color: #d32f2f;
     font-size: 14px;
@@ -427,7 +378,6 @@ p {
     font-weight: 500;
 }
 
-/* Success message styling - shown after valid submission */
 .success-message {
     background-color: #4caf50;
     color: white;
@@ -440,7 +390,6 @@ p {
     animation: slideDown 0.3s ease-out;
 }
 
-/* Slide down animation for success message */
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -452,7 +401,6 @@ p {
     }
 }
 
-/* Submit button styling */
 .submit-btn {
     background-color: #003366;
     color: white;
@@ -466,44 +414,46 @@ p {
     margin-top: 10px;
 }
 
-/* Submit button hover */
 .submit-btn:hover {
     background-color: #004d99;
     transform: translateY(-2px);
 }
 
-/* Submit button active state */
 .submit-btn:active {
     transform: translateY(0);
 }
 
-/* ===== CONTACT INFORMATION SECTION ===== */
-/* Contact info paragraph with flexbox for icons */
+/* ===== CONTACT INFO ===== */
 #contact {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 #contact p {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     justify-content: center;
+    font-size: 1.1em;
 }
 
-/* Contact link styling */
+#contact img {
+    vertical-align: middle;
+}
+
 #contact a {
     color: #003366;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Contact link hover effect */
 #contact a:hover {
     color: #ff6600;
 }
 
-/* ===== PRODUCTS PAGE STYLES ===== */
-/* Hero section */
+/* ===== PRODUCTS PAGE ===== */
 .products-hero {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -512,20 +462,84 @@ p {
     margin-bottom: 40px;
 }
 
-/* Products hero heading */
 .hero-content h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
     color: white;
 }
 
-/* Products hero paragraph */
 .hero-content p {
     font-size: 1.2em;
     opacity: 0.95;
 }
 
-/* Products grid layout */
+/* video section */
+#featured-videos {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.video-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.video-item h3 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.video-item p {
+    color: #666;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+/* video wrapper maintains 16:9 ratio */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.toggle-btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #004d99;
+}
+
+/* product cards grid */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -533,7 +547,6 @@ p {
     margin-top: 40px;
 }
 
-/* Product card styling */
 .product-card {
     background: white;
     border-radius: 12px;
@@ -544,14 +557,12 @@ p {
     transform: translateY(30px);
 }
 
-/* Product card visible state with animation */
 .product-card.is-visible {
     opacity: 1;
     transform: translateY(0);
     animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Fade in up animation for product cards */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -563,13 +574,11 @@ p {
     }
 }
 
-/* Product card hover effect */
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Product image container */
 .product-image {
     position: relative;
     width: 100%;
@@ -578,7 +587,6 @@ p {
     background-color: #f5f5f5;
 }
 
-/* Product image (to cover container) */
 .product-image img {
     width: 100%;
     height: 100%;
@@ -586,12 +594,10 @@ p {
     transition: transform 0.4s ease;
 }
 
-/* Zoom effect on product image hover */
 .product-card:hover .product-image img {
     transform: scale(1.1);
 }
 
-/* Product badge (Popular, New, Hot Deal) */
 .product-badge {
     position: absolute;
     top: 15px;
@@ -607,12 +613,10 @@ p {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Product information section */
 .product-info {
     padding: 25px;
 }
 
-/* Product title */
 .product-info h3 {
     color: #003366;
     font-size: 1.5em;
@@ -620,7 +624,6 @@ p {
     font-weight: 600;
 }
 
-/* Product description */
 .product-info > p {
     color: #555;
     line-height: 1.6;
@@ -628,14 +631,12 @@ p {
     font-size: 0.95em;
 }
 
-/* Product features list */
 .product-features {
     list-style: none;
     padding: 0;
     margin: 20px 0;
 }
 
-/* Individual feature item */
 .product-features li {
     padding: 8px 0;
     color: #666;
@@ -644,7 +645,6 @@ p {
     padding-left: 25px;
 }
 
-/* Checkmark icon */
 .product-features li:before {
     content: "✓";
     position: absolute;
@@ -654,7 +654,6 @@ p {
     font-size: 1.1em;
 }
 
-/* Product inquiry button */
 .product-btn {
     display: inline-block;
     background-color: #003366;
@@ -667,13 +666,12 @@ p {
     margin-top: 15px;
 }
 
-/* Product button hover effect */
 .product-btn:hover {
     background-color: #004d99;
     transform: translateY(-2px);
 }
 
-/* ===== CALL TO ACTION SECTION ===== */
+/* ===== CTA SECTION ===== */
 .cta-section {
     background: linear-gradient(135deg, #003366 0%, #004d99 100%);
     color: white;
@@ -682,21 +680,18 @@ p {
     margin-top: 60px;
 }
 
-/* CTA heading */
 .cta-content h2 {
     font-size: 2em;
     margin-bottom: 15px;
     color: white;
 }
 
-/* CTA paragraph */
 .cta-content p {
     font-size: 1.1em;
     margin-bottom: 25px;
     opacity: 0.95;
 }
 
-/* CTA button (contrasting using brand colors) */
 .cta-button {
     display: inline-block;
     background-color: #ff6600;
@@ -709,14 +704,12 @@ p {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* CTA button hover */
 .cta-button:hover {
     background-color: #ff8533;
     transform: scale(1.05);
 }
 
 /* ===== FOOTER ===== */
-/* Footer styling with brand color background */
 footer {
     text-align: center;
     padding: 20px;
@@ -725,8 +718,7 @@ footer {
     margin-top: 40px;
 }
 
-/* ===== WHATSAPP FLOATING BUTTON ===== */
-/* Fixed position WhatsApp button in bottom right */
+/* ===== WHATSAPP BUTTON ===== */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -746,42 +738,35 @@ footer {
     transition: transform 0.3s;
 }
 
-/* WhatsApp button hover effect */
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE DESIGN - SMARTPHONE ===== */
+/* ===== MOBILE STYLES ===== */
 @media (max-width: 768px) {
-    /* Reduce header padding on mobile */
     header {
         flex-direction: column;
         gap: 15px;
     }
     
-    /* Stack navigation vertically on mobile */
     nav ul {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
     
-    /* Reduce hero section padding */
     .hero {
         padding: 80px 20px;
     }
     
-    /* Smaller hero heading on mobile */
     .hero h1 {
         font-size: 2em;
     }
     
-    /* Smaller hero text */
     .hero p {
         font-size: 1.1em;
     }
     
-    /* Adjust in products hero */
     .products-hero {
         padding: 50px 20px;
     }
@@ -794,18 +779,15 @@ footer {
         font-size: 1em;
     }
     
-    /* Single column products grid on mobile */
     .products-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-    /* Reduce product image height on mobile */
     .product-image {
         height: 200px;
     }
     
-    /* Adjust CTA section padding */
     .cta-section {
         padding: 40px 20px;
     }
@@ -814,7 +796,6 @@ footer {
         font-size: 1.5em;
     }
     
-    /* Reduce contact form padding on mobile */
     #contact-form {
         padding: 25px;
         margin: 20px 15px;
@@ -834,8 +815,20 @@ footer {
         padding: 12px 25px;
         font-size: 15px;
     }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
     
-    /* Reduce products grid on mobile */
+    .video-item {
+        padding: 15px;
+    }
+    
+    .video-item h3 {
+        font-size: 1.1em;
+    }
+
     .products {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
@@ -845,15 +838,18 @@ footer {
         padding: 15px;
     }
     
-    /* One column about grid on mobile */
     .about-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-    /* One column values grid on mobile */
     .values-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .team-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
