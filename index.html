@@ -1,118 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport settings for responsive design on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- meta description for search engines -->
-    <meta name="description" content="Multi Store Eletro - the best Electronics and Appliances products with quality and fair prices in São Paulo.">
-    <title>Multi Store Eletro - Home</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="google-site-verification" content="ywjQn2NFqJglKNx-I1BiyfqZfPbDZ_KRYTXJMsBETps" /> <!--Verificar quando o site estiver online-->
+    <meta name="description" content="Multi Loja Eletro - Os melhores eletrônicos e eletrodomésticos com qualidade e preços justos em São Paulo. TVs, Geladeiras, Computadores, Smartphones e muito mais.">
+    <meta name="keywords" content="eletrônicos, eletrodomésticos, TV, geladeira, computador, smartphone, micro-ondas, São Paulo, loja de eletrônicos, preço justo">
+    <meta name="author" content="Multi Loja Eletro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mlojaeletro.com.br/">
+    <meta property="og:title" content="Multi Loja Eletro - Eletrônicos e Eletrodomésticos">
+    <meta property="og:description" content="Os melhores eletrônicos e eletrodomésticos com qualidade e preços justos em São Paulo.">
+    <meta property="og:image" content="https://mlojaeletro.com.br/img/logotipo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mlojaeletro.com.br/">
+    <meta property="twitter:title" content="Multi Loja Eletro - Eletrônicos e Eletrodomésticos">
+    <meta property="twitter:description" content="Os melhores eletrônicos e eletrodomésticos com qualidade e preços justos em São Paulo.">
+    <meta property="twitter:image" content="https://mlojaeletro.com.br/img/logotipo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="img/logotipo.png">
+        <!-- Favicons - Múltiplos tamanhos para diferentes dispositivos -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <title>Multi Loja Eletro - Eletrônicos e Eletrodomésticos em São Paulo</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DBDFTBR6Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9DBDFTBR6Q'); // ID do Google Analytics
+    </script>
 </head>
 
 <body>
-    <!-- Header section: logo and main navigation -->
+    <!-- Header -->
     <header>
-        <!-- Logo with link to homepage -->
         <div class="logo">
             <a href="index.html">
-                <img src="img/logotipo.png" alt="Multi Store Eletro Logo" />
+                <img src="img/logotipo.png" alt="Multi Loja Eletro - Loja de Eletrônicos em São Paulo" />
             </a>
         </div>
-        <!-- Main menu -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre Nós</a></li>
+                <li><a href="products.html">Produtos</a></li>
+                <li><a href="contact.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero section: main banner with welcome message -->
+    <!-- Hero section -->
     <section id="home" class="hero">
         <div class="hero-overlay">
-            <h1>Welcome to Multi Store Electro</h1>
-            <p>The best Electronics and Appliances with quality and fair prices</p>
-            <!-- Call-to-action button directing to products page -->
-            <a href="products.html" class="hero-btn">Browse Our Products</a>
+            <h1>Bem-vindo à Multi Loja Eletro</h1>
+            <p>Os melhores Eletrônicos e Eletrodomésticos com qualidade e preços justos</p>
+            <a href="products.html" class="hero-btn">Conheça Nossos Produtos</a>
         </div>
     </section>
 
-    <!-- About preview on homepage -->
+    <!-- About preview -->
     <section id="about-preview" class="section">
-        <h2>Why Choose Multi Store Eletro?</h2>
+        <h2>Por Que Escolher a Multi Loja Eletro?</h2>
         <div class="about-grid">
-            <!-- Quality card -->
             <div class="about-card">
-                <div class="about-icon">🏆</div>
-                <h3>Quality Products</h3>
-                <p>We offer only the best electronics from trusted brands with full warranty support.</p>
+                <h3>Produtos de Qualidade</h3>
+                <p>Oferecemos apenas os melhores eletrônicos de marcas confiáveis com garantia completa.</p>
             </div>
-            <!-- Fair Prices card -->
             <div class="about-card">
-                <div class="about-icon">💰</div>
-                <h3>Fair Prices</h3>
-                <p>Competitive pricing ensures you get the best value for your money.</p>
+                <h3>Preços Justos</h3>
+                <p>Preços competitivos garantem o melhor custo-benefício para você.</p>
             </div>
-            <!-- Customer Service card -->
             <div class="about-card">
-                <div class="about-icon">👥</div>
-                <h3>Expert Service</h3>
-                <p>Our knowledgeable team is ready to help you find the perfect product.</p>
+                <h3>Atendimento Especializado</h3>
+                <p>Nossa equipe experiente está pronta para ajudá-lo a encontrar o produto perfeito.</p>
             </div>
         </div>
     </section>
 
-    <!-- Featured products section on homepage -->
+    <!-- Featured products -->
     <section id="featured-products" class="section">
-        <h2>Featured Categories</h2>
-        <p class="section-intro">Explore our most popular product categories</p>
+        <h2>Categorias em Destaque</h2>
+        <p class="section-intro">Explore nossas categorias de produtos mais populares</p>
         
-        <!-- Grid displaying main categories -->
         <div class="products">
             <div class="product">
-                <span class="product-icon">📺</span>
                 <h3>Smart TVs</h3>
             </div>
             <div class="product">
-                <span class="product-icon">❄️</span>
-                <h3>Refrigerators</h3>
+                <h3>Geladeiras</h3>
             </div>
             <div class="product">
-                <span class="product-icon">💻</span>
-                <h3>Computers</h3>
+                <h3>Computadores</h3>
             </div>
             <div class="product">
-                <span class="product-icon">📱</span>
                 <h3>Smartphones</h3>
             </div>
             <div class="product">
-                <span class="product-icon">🍽️</span>
-                <h3>Microwaves</h3>
+                <h3>Micro-ondas</h3>
             </div>
             <div class="product">
-                <span class="product-icon">📷</span>
-                <h3>Photography</h3>
+                <h3>Fotografia</h3>
             </div>
         </div>
-        <!-- Link to full products page -->
         <div style="text-align: center; margin-top: 30px;">
-            <a href="products.html" class="view-all-btn">View All Products</a>
+            <a href="products.html" class="view-all-btn">Ver Todos os Produtos</a>
         </div>
     </section>
-    <!-- WhatsApp floating button -->
+    
+    <!-- WhatsApp button -->
     <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
         class="whatsapp-float" 
         target="_blank" 
-        title="Contact us on WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50">
+        rel="noopener noreferrer"
+        title="Entre em contato pelo WhatsApp"
+        aria-label="Contato via WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50">
     </a>
-
-    <!-- Footer with copyright information -->
+    
     <footer>
-        <p>&copy; 2025 Multi Store Electro - All rights reserved.</p>
+        <p>&copy; 2025 Multi Loja Eletro - Todos os direitos reservados.</p>
     </footer>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ElectronicsStore",
+        "name": "Multi Loja Eletro",
+        "image": "https://mlojaeletro.com.br/img/logotipo.png",
+        "url": "https://mlojaeletro.com.br",
+        "telephone": "+5511959437931",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "priceRange": "$$",
+        "description": "Loja de eletrônicos e eletrodomésticos em São Paulo com os melhores preços."
+    }
+    </script>
 </body>
 </html>

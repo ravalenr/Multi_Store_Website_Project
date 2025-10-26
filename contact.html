@@ -1,184 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Multi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Entre em contato com a Multi Loja Eletro. Tire suas dúvidas sobre eletrônicos e eletrodomésticos. Atendimento especializado em São Paulo.">
+    <meta name="keywords" content="contato, multi loja eletro, atendimento, dúvidas, eletrônicos, são paulo">
+    <meta name="author" content="Multi Loja Eletro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mlojaeletro.com.br/contact.html">
+    <meta property="og:title" content="Contato - Multi Loja Eletro">
+    <meta property="og:description" content="Entre em contato conosco. Atendimento especializado em eletrônicos.">
+    <meta property="og:image" content="https://mlojaeletro.com.br/img/logotipo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <title>Contato - Multi Loja Eletro</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DBDFTBR6Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9DBDFTBR6Q');
+    </script>
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("mxNipH75gt76PFDas"); // chave pública do EmailJS
+        })();
+    </script>
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <!-- Header with navigation menu -->
+    <!-- Header -->
     <header>
         <div class="logo">
-          <a href="index.html"><img src="img/logotipo.png" alt="Multi Store Eletro" /></a>
+          <a href="index.html"><img src="img/logotipo.png" alt="Multi Loja Eletro" /></a>
         </div>
-        <!-- Main navigation links -->
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="about.html">Sobre Nós</a></li>
+            <li><a href="products.html">Produtos</a></li>
+            <li><a href="contact.html">Contato</a></li>
           </ul>
         </nav>
     </header>
 
     <!-- Contact form section -->
     <section id="contact-form" class="section">
-        <h2>Send Us a Message</h2>
-        <p>Have a question or need assistance? Fill out the form below and we'll get back to you as soon as possible.</p>
+        <h2>Envie-nos uma Mensagem</h2>
+        <p>Tem alguma dúvida ou precisa de assistência? Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
         
-        <!-- Contact form with validation -->
-        <form id="contactForm" onsubmit="return validateForm(event)">
+        <form id="contactForm" onsubmit="return submitForm(event)">
             
-            <!-- Name input field -->
+            <!-- Name field -->
             <div class="form-group">
-                <label for="name">Full Name: *</label>
+                <label for="name">Nome Completo: *</label>
                 <input 
                     type="text" 
                     id="name" 
                     name="name" 
-                    placeholder="Enter your full name"
+                    placeholder="Digite seu nome completo"
+                    required
                 >
-                <!-- Error message container for name field -->
                 <span id="nameError" class="error-message"></span>
             </div>
 
-            <!-- Phone input field -->
+            <!-- Phone field -->
             <div class="form-group">
-                <label for="phone">Phone Number: *</label>
+                <label for="phone">Número de Telefone: *</label>
                 <input 
-                    type="text" 
+                    type="tel"
                     id="phone" 
                     name="phone" 
-                    placeholder="Enter your phone number (9 or 10 digits)"
+                    placeholder="Digite seu telefone (9 ou 10 dígitos)"
+                    required
                 >
-                <!-- Error message container for phone field -->
                 <span id="phoneError" class="error-message"></span>
             </div>
 
-            <!-- Email input field -->
+            <!-- Email field -->
             <div class="form-group">
-                <label for="email">Email Address: *</label>
+                <label for="email">Endereço de E-mail: *</label>
                 <input 
                     type="email" 
                     id="email" 
                     name="email" 
-                    placeholder="Enter your email address"
+                    placeholder="Digite seu endereço de e-mail"
+                    required
                 >
-                <!-- Error message container for email field -->
                 <span id="emailError" class="error-message"></span>
             </div>
 
-            <!-- Query textarea field -->
+            <!-- Message field -->
             <div class="form-group">
-                <label for="query">Nature of Query: *</label>
+                <label for="query">Mensagem: *</label>
                 <textarea 
                     id="query" 
                     name="query" 
                     rows="5" 
-                    placeholder="Please describe your inquiry or question"
+                    placeholder="Por favor, descreva sua dúvida ou pergunta"
+                    required
                 ></textarea>
-                <!-- Error message container for query field -->
                 <span id="queryError" class="error-message"></span>
             </div>
 
+            <!-- Google reCAPTCHA -->
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LcN9fcrAAAAAGV2SRqQAxii2eYwYGMS1az2RMiP"></div>
+                <span id="recaptchaError" class="error-message"></span>
+            </div>
+
             <!-- Submit button -->
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Enviar Mensagem</button>
             
-            <!-- Success message container (hidden by default) -->
+            <!-- Success message -->
             <div id="successMessage" class="success-message"></div>
         </form>
     </section>
 
-    <!-- Contact information section -->
+    <!-- Contact info -->
     <section id="contact" class="section">
-        <h2>Other Ways to Reach Us</h2>
-        <p>Prefer to contact us directly? You can also reach us through:</p>
-        <p><strong>E-mail:</strong> <a href="mailto:multijustforfun@gmail.com">multijustforfun@gmail.com</a></p>
+        <h2>Outras Formas de nos Contatar</h2>
+        <p>Prefere entrar em contato diretamente? Você também pode nos encontrar através de:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:multilojaeletro@gmail.com">multilojaeletro@gmail.com</a></p>
         <p><strong>WhatsApp:</strong>
         <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
         target="_blank" 
-        title="Contact us on WhatsApp">
-        <img src="img/whatsapp.png" alt="WhatsApp" width="20"> (11) 91234-5678
+        rel="noopener noreferrer"
+        title="Entre em contato pelo WhatsApp">
+        <img src="img/whatsapp.png" alt="WhatsApp" width="20"> (11) 99121-5175
         </a></p>
-        <p><strong>Address:</strong> São Paulo - SP</p>
+        <p><strong>Endereço:</strong> São Paulo - SP</p>
     </section>
 
-    <!-- WhatsApp floating button -->
+    <!-- WhatsApp button -->
     <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
         class="whatsapp-float" 
         target="_blank" 
-        title="Contact us on WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50">
+        rel="noopener noreferrer"
+        title="Entre em contato pelo WhatsApp"
+        aria-label="Contato via WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50">
     </a>
 
-    <!-- Footer section -->
     <footer>
-        <p>&copy; 2025 Multi Store Eletro. All rights reserved.</p>
+        <p>&copy; 2025 Multi Loja Eletro. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- JavaScript for form validation -->
+    <!-- Form validation and EmailJS integration -->
     <script>
-        // Main function to validate the contact form - runs when form is submitted
-        function validateForm(event) {
-            // Avoids the default form submission
+        function submitForm(event) {
             event.preventDefault();
             
-            // clears any previous error messages
+            // Clear previous errors
             clearErrors();
             
-            // get form field values and trim answers
+            // Get form values
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim();
             const query = document.getElementById('query').value.trim();
             
-            // boolean to check if is valid
             let isValid = true;
             
-            // Validate name 
+            // Validate name
             if (!validateName(name)) {
                 isValid = false;
             }
             
-            // Validate phone 
+            // Validate phone
             if (!validatePhone(phone)) {
                 isValid = false;
             }
             
-            // Validate email 
+            // Validate email
             if (!validateEmail(email)) {
                 isValid = false;
             }
             
-            // Validate query 
+            // Validate message
             if (!validateQuery(query)) {
                 isValid = false;
             }
             
-            // If all validations pass, show success message
-            if (isValid) {
-                showSuccessMessage();
-                document.getElementById('contactForm').reset();
+            // Validate reCAPTCHA (temporario, apenas para teste local)
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (recaptchaResponse.length === 0) {
+                showError('recaptchaError', 'Por favor, confirme que você não é um robô.');
+                isValid = false;
             }
+            
+            // If all validations pass, send email
+            if (isValid) {
+                sendEmail(name, phone, email, query);
+            }
+            
             return false;
         }
 
+        function sendEmail(name, phone, email, query) {
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            
+            // EmailJS parameters
+            const templateParams = {
+                from_name: name,
+                from_phone: phone,
+                from_email: email,
+                message: query,
+                to_email: 'multilojaeletro@gmail.com'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_uzbicg6', 'template_ijiuss1', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    showSuccessMessage();
+                    document.getElementById('contactForm').reset();
+                    grecaptcha.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensagem';
+                    
+                    // Track conversion in Google Analytics
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submission', {
+                            'event_category': 'Contact',
+                            'event_label': 'Contact Form'
+                        });
+                    }
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    showError('queryError', 'Erro ao enviar mensagem. Por favor, tente novamente ou entre em contato pelo WhatsApp.');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensagem';
+                });
+        }
 
         function validateName(name) {
-            // Check if name field is empty
             if (name === '') {
-                showError('nameError', 'Please enter your name.');
+                showError('nameError', 'Por favor, digite seu nome.');
                 return false;
             }
             
-            // RegEx: only letters and spaces allowed
-            const namePattern = /^[a-zA-Z\s]+$/;
-            
-            // Check if name matches the pattern
+            const namePattern = /^[a-zA-ZÀ-ÿ\s']+$/;
             if (!namePattern.test(name)) {
-                showError('nameError', 'Name must contain only letters and spaces (no numbers or symbols).');
+                showError('nameError', 'O nome deve conter apenas letras e espaços.');
                 return false;
             }
             
@@ -186,24 +267,19 @@
         }
 
         function validatePhone(phone) {
-            // Check if field is empty
             if (phone === '') {
-                showError('phoneError', 'Please enter your phone number.');
+                showError('phoneError', 'Por favor, digite seu número de telefone.');
                 return false;
             }
             
-            // RegEx: only digits allowed
             const phonePattern = /^[0-9]+$/;
-            
-            // Check if contains only numbers
             if (!phonePattern.test(phone)) {
-                showError('phoneError', 'Phone number must contain only numeric digits.');
+                showError('phoneError', 'O número de telefone deve conter apenas dígitos.');
                 return false;
             }
             
-            // Check if is 9 or 10 digits long
-            if (phone.length < 9 || phone.length > 10) {
-                showError('phoneError', 'Phone number must be 9 or 10 digits long.');
+            if (phone.length < 9 || phone.length > 11) {
+                showError('phoneError', 'O número de telefone deve ter entre 9 e 11 dígitos.');
                 return false;
             }
             
@@ -211,23 +287,18 @@
         }
 
         function validateEmail(email) {
-            // Check if field is empty
             if (email === '') {
-                showError('emailError', 'Please enter your email address.');
+                showError('emailError', 'Por favor, digite seu endereço de e-mail.');
                 return false;
             }
-
-            // email pattern is also validated by html5 input type="email"
             return true;
         }
 
         function validateQuery(query) {
-            // Check if field is empty
             if (query === '') {
-                showError('queryError', 'Please describe the nature of your inquiry.');
+                showError('queryError', 'Por favor, descreva sua consulta.');
                 return false;
             }
-            
             return true;
         }
 
@@ -237,29 +308,22 @@
             errorElement.style.display = 'block';
         }
 
-        // Clears all error messages from the form
         function clearErrors() {
-            // Get elements with 'error-message'
             const errorMessages = document.querySelectorAll('.error-message');
-
-            // Loop and hide error messages
             errorMessages.forEach(function(error) {
                 error.textContent = '';
                 error.style.display = 'none';
             });
             
-            // Also hide success message when clearing errors
             const successMessage = document.getElementById('successMessage');
             successMessage.style.display = 'none';
         }
 
-        // Disoplay success message, hide after 5 seconds
         function showSuccessMessage() {
             const successMessage = document.getElementById('successMessage');
-            successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            successMessage.textContent = 'Obrigado pela sua mensagem! Entraremos em contato em breve.';
             successMessage.style.display = 'block';
             
-            // Hide success message after 5 seconds
             setTimeout(function() {
                 successMessage.style.display = 'none';
             }, 5000);

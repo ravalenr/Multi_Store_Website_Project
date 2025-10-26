@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Multi Store Eletro</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Confira nossos produtos: Smart TVs 4K, Geladeiras, Computadores, Smartphones, Micro-ondas e Equipamentos de Fotografia. Consulte preços e condições especiais.">
+    <meta name="keywords" content="smart tv, geladeira, computador, notebook, smartphone, micro-ondas, câmera, produtos eletrônicos, são paulo">
+    <meta name="author" content="Multi Loja Eletro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mlojaeletro.com.br/products.html">
+    <meta property="og:title" content="Produtos - Multi Loja Eletro">
+    <meta property="og:description" content="Conheça nossa linha completa de eletrônicos e eletrodomésticos com os melhores preços.">
+    <meta property="og:image" content="https://mlojaeletro.com.br/img/tvs.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <title>Nossos Produtos - Multi Loja Eletro</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DBDFTBR6Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9DBDFTBR6Q'); // ID do Google Analytics
+    </script>
 </head>
 <body>
-    <!-- Header section -->
+    <!-- Header -->
     <header>
         <div class="logo">
-          <a href="index.html"><img src="img/logotipo.png" alt="Multi Store Eletro" /></a>
+          <a href="index.html"><img src="img/logotipo.png" alt="Multi Loja Eletro" /></a>
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="about.html">Sobre Nós</a></li>
+            <li><a href="products.html">Produtos</a></li>
+            <li><a href="contact.html">Contato</a></li>
           </ul>
         </nav>
     </header>
@@ -25,18 +51,18 @@
     <!-- Hero section -->
     <section class="products-hero">
         <div class="hero-content">
-            <h1>Our Product Categories</h1>
-            <p>Discover the best electronics and appliances at competitive prices</p>
+            <h1>Nossas Categorias de Produtos</h1>
+            <p>Descubra os melhores eletrônicos e eletrodomésticos a preços competitivos</p>
         </div>
     </section>
 
-    <!-- Meet our products video section -->
+    <!-- Featured videos section -->
     <section id="featured-videos" class="section">
-        <h2>Check Out Our Top Products</h2>
-        <p class="section-intro">Watch these videos to see our finest products in action</p>
+        <h2>Conheça Nossos Principais Produtos</h2>
+        <p class="section-intro">Assista a estes vídeos para ver nossos melhores produtos em ação</p>
         
         <div class="video-grid">
-            <!-- iPhone 17 Pro -->
+            <!-- Phone -->
             <div class="video-item">
                 <h3>iPhone 17 Pro</h3>
                 <div class="video-wrapper">
@@ -44,157 +70,178 @@
                             title="iPhone 17 Pro" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                            allowfullscreen
+                            loading="lazy">
                     </iframe>
                 </div>
-                <p>Latest flagship with amazing camera and performance</p>
+                <p>Smartphone topo de linha com câmera incrível e desempenho excepcional</p>
             </div>
 
-            <!-- Samsung Bespoke Refrigerator -->
+            <!-- Refrigerator -->
             <div class="video-item">
-                <h3>Samsung Bespoke Refrigerator</h3>
+                <h3>Geladeira Samsung Bespoke</h3>
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/A2HqZnKIViI" 
-                            title="Samsung Bespoke Refrigerator" 
+                            title="Geladeira Samsung Bespoke" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                            allowfullscreen
+                            loading="lazy">
                     </iframe>
                 </div>
-                <p>Customizable design meets smart technology</p>
+                <p>Design personalizável com tecnologia inteligente</p>
             </div>
 
-            <!-- Samsung Frame Pro -->
+            <!-- TV -->
             <div class="video-item">
-                <h3>Samsung Frame Pro TV</h3>
+                <h3>TV Samsung Frame Pro</h3>
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/Q7Rxzgo96M0" 
-                            title="Samsung Frame Pro TV" 
+                            title="TV Samsung Frame Pro" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                            allowfullscreen
+                            loading="lazy">
                     </iframe>
                 </div>
-                <p>TV that looks like art when not in use</p>
+                <p>TV que parece uma obra de arte quando não está em uso</p>
             </div>
         </div>
 
-        <!-- Toggle button to show/hide videos -->
+        <!-- Toggle button -->
         <div style="text-align: center; margin-top: 20px;">
-            <button id="toggleVideos" class="toggle-btn">Hide Videos</button>
+            <button id="toggleVideos" class="toggle-btn">Ocultar Vídeos</button>
         </div>
     </section>
 
     <!-- Main products section -->
     <section id="products" class="section">
-        <h2>Browse Our Collection</h2>
-        <p class="section-intro">Quality products from trusted brands, backed by excellent customer service and warranty support.</p>
+        <h2>Navegue Nossa Coleção</h2>
+        <p class="section-intro">Produtos de qualidade de marcas confiáveis, com excelente atendimento ao cliente e suporte de garantia.</p>
         
         <div class="products-grid">
           
           <!-- TV Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/tvs.jpeg" alt="Smart TVs">
+              <img src="img/tvs.jpeg" alt="Smart TVs 4K e OLED" loading="lazy">
               <div class="product-badge">Popular</div>
             </div>
             <div class="product-info">
               <h3>Smart TVs</h3>
-              <p>Experience stunning picture quality with our range of 4K and OLED Smart TVs. From compact 32" to immersive 75" screens.</p>
+              <p>Experimente qualidade de imagem impressionante com nossa linha de Smart TVs 4K e OLED. De telas compactas de 32" a telas imersivas de 75".</p>
               <ul class="product-features">
-                <li>4K Ultra HD Resolution</li>
-                <li>Smart TV Features</li>
-                <li>Multiple HDMI Ports</li>
+                <li>Resolução 4K Ultra HD</li>
+                <li>Recursos Smart TV</li>
+                <li>Múltiplas portas HDMI</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Smart TVs')">Solicitar Orçamento</a>
             </div>
           </div>
 
           <!-- Fridge Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/fridge.jpeg" alt="Refrigerators">
-              <div class="product-badge">Best Value</div>
+              <img src="img/fridge.jpeg" alt="Geladeiras com eficiência energética" loading="lazy">
+              <div class="product-badge">Melhor Custo</div>
             </div>
             <div class="product-info">
-              <h3>Refrigerators</h3>
-              <p>Keep your food fresh with energy-efficient refrigerators. Single door, double door, and French door models available.</p>
+              <h3>Geladeiras</h3>
+              <p>Mantenha seus alimentos frescos com geladeiras com eficiência energética. Modelos de porta simples, dupla e porta francesa disponíveis.</p>
               <ul class="product-features">
-                <li>Energy Efficient A+ Rating</li>
-                <li>Frost-Free Technology</li>
-                <li>Adjustable Shelving</li>
+                <li>Classificação de Eficiência Energética A+</li>
+                <li>Tecnologia Frost-Free</li>
+                <li>Prateleiras Ajustáveis</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Geladeiras')">Solicitar Orçamento</a>
             </div>
           </div>
 
           <!-- Computer Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/computers.jpeg" alt="Computers">
-              <div class="product-badge">New Arrivals</div>
+              <img src="img/computers.jpeg" alt="Computadores e Notebooks" loading="lazy">
+              <div class="product-badge">Novidades</div>
             </div>
             <div class="product-info">
-              <h3>Computers & Laptops</h3>
-              <p>High-performance desktops and portable laptops for work, gaming, and entertainment. Latest processors and graphics.</p>
+              <h3>Computadores e Notebooks</h3>
+              <p>Desktops de alto desempenho e notebooks portáteis para trabalho, jogos e entretenimento. Últimos processadores e placas gráficas.</p>
               <ul class="product-features">
-                <li>Latest Generation Processors</li>
-                <li>SSD Storage Options</li>
-                <li>Extended Warranty Available</li>
+                <li>Processadores de Última Geração</li>
+                <li>Opções de Armazenamento SSD</li>
+                <li>Garantia Estendida Disponível</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Computadores')">Solicitar Orçamento</a>
             </div>
           </div>
 
           <!-- Smartphone Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/telephone.png" alt="Smartphones">
-              <div class="product-badge">Hot Deal</div>
+              <img src="img/telephone.png" alt="Smartphones 5G" loading="lazy">
+              <div class="product-badge">Oferta</div>
             </div>
             <div class="product-info">
               <h3>Smartphones</h3>
-              <p>Stay connected with the latest smartphones from top brands. 5G enabled, powerful cameras, and long battery life.</p>
+              <p>Fique conectado com os smartphones mais recentes das principais marcas. 5G habilitado, câmeras potentes e bateria de longa duração.</p>
               <ul class="product-features">
-                <li>5G Connectivity</li>
-                <li>High-Resolution Cameras</li>
-                <li>Fast Charging Support</li>
+                <li>Conectividade 5G</li>
+                <li>Câmeras de Alta Resolução</li>
+                <li>Suporte a Carregamento Rápido</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Smartphones')">Solicitar Orçamento</a>
             </div>
           </div>
 
           <!-- Microwave Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/microwaves.jpeg" alt="Microwaves">
+              <img src="img/microwaves.jpeg" alt="Micro-ondas" loading="lazy">
             </div>
             <div class="product-info">
-              <h3>Microwaves</h3>
-              <p>Quick and convenient cooking with our selection of microwave ovens. Multiple power levels and preset cooking modes.</p>
+              <h3>Micro-ondas</h3>
+              <p>Cozimento rápido e conveniente com nossa seleção de fornos micro-ondas. Múltiplos níveis de potência e modos de cozimento pré-programados.</p>
               <ul class="product-features">
-                <li>Multiple Power Settings</li>
-                <li>Auto-Cook Menus</li>
-                <li>Easy Clean Interior</li>
+                <li>Múltiplas Configurações de Potência</li>
+                <li>Menus de Cozimento Automático</li>
+                <li>Interior de Fácil Limpeza</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Micro-ondas')">Solicitar Orçamento</a>
             </div>
           </div>
 
           <!-- Photography Product Card -->
           <div class="product-card">
             <div class="product-image">
-              <img src="img/photography.jpeg" alt="Cameras">
+              <img src="img/photography.jpeg" alt="Equipamentos de Fotografia" loading="lazy">
             </div>
             <div class="product-info">
-              <h3>Photography Equipment</h3>
-              <p>Capture life's moments with professional cameras, lenses, and accessories. Perfect for beginners and professionals.</p>
+              <h3>Equipamentos de Fotografia</h3>
+              <p>Capture os momentos da vida com câmeras profissionais, lentes e acessórios. Perfeito para iniciantes e profissionais.</p>
               <ul class="product-features">
-                <li>DSLR & Mirrorless Options</li>
-                <li>Professional Lenses</li>
-                <li>Accessories & Tripods</li>
+                <li>Opções DSLR e Mirrorless</li>
+                <li>Lentes Profissionais</li>
+                <li>Acessórios e Tripés</li>
               </ul>
-              <a href="contact.html" class="product-btn">Inquire Now</a>
+              <p style="font-size: 1.2em; font-weight: bold; color: #003366; margin-top: 15px;">
+                💰 Consulte preços e condições
+              </p>
+              <a href="contact.html" class="product-btn" onclick="trackProductClick('Fotografia')">Solicitar Orçamento</a>
             </div>
           </div>
 
@@ -204,22 +251,24 @@
     <!-- Call to action -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Can't Find What You're Looking For?</h2>
-            <p>Our team is here to help you find the perfect product for your needs. Contact us today!</p>
-            <a href="contact.html" class="cta-button">Contact Us Now</a>
+            <h2>Não Encontrou o Que Procura?</h2>
+            <p>Nossa equipe está aqui para ajudá-lo a encontrar o produto perfeito para suas necessidades. Entre em contato hoje!</p>
+            <a href="contact.html" class="cta-button">Fale Conosco Agora</a>
         </div>
     </section>
 
-    <!-- WhatsApp floating button -->
-    <a href="https://api.whatsapp.com/send?phone=5511991215175&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
+    <!-- WhatsApp button -->
+    <a href="https://api.whatsapp.com/send?phone=5511959437931&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!" 
         class="whatsapp-float" 
         target="_blank" 
-        title="Contact us on WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50">
+        rel="noopener noreferrer"
+        title="Entre em contato pelo WhatsApp"
+        aria-label="Contato via WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="50" height="50">
     </a>
 
     <footer>
-        <p>&copy; 2025 Multi Store Eletro. All rights reserved.</p>
+        <p>&copy; 2025 Multi Loja Eletro. Todos os direitos reservados.</p>
     </footer>
 
     <script>
@@ -237,7 +286,7 @@
             });
         });
 
-        // Toggle videos section visibility
+        // Toggle videos visibility
         const toggleBtn = document.getElementById('toggleVideos');
         const videosSection = document.getElementById('featured-videos');
         let videosVisible = true;
@@ -249,15 +298,50 @@
             if (videosVisible) {
                 videoGrid.style.display = 'none';
                 intro.style.display = 'none';
-                toggleBtn.textContent = 'Show Videos';
+                toggleBtn.textContent = 'Mostrar Vídeos';
                 videosVisible = false;
             } else {
                 videoGrid.style.display = 'grid';
                 intro.style.display = 'block';
-                toggleBtn.textContent = 'Hide Videos';
+                toggleBtn.textContent = 'Ocultar Vídeos';
                 videosVisible = true;
             }
         });
+        
+        // Track product clicks in Google Analytics
+        function trackProductClick(productName) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'product_click', {
+                    'event_category': 'Products',
+                    'event_label': productName
+                });
+            }
+        }
+    </script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "Product",
+                "name": "Smart TVs",
+                "description": "Smart TVs 4K e OLED de 32 a 75 polegadas"
+            },
+            {
+                "@type": "Product",
+                "name": "Geladeiras",
+                "description": "Geladeiras com eficiência energética A+"
+            },
+            {
+                "@type": "Product",
+                "name": "Computadores e Notebooks",
+                "description": "Desktops e notebooks de última geração"
+            }
+        ]
+    }
     </script>
 </body>
 </html>
